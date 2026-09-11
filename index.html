@@ -207,6 +207,49 @@
       border: 2px solid rgba(246, 146, 255, .58);
       box-shadow: 0 18px 48px rgba(0,0,0,.42);
     }
+    .premium-section {
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 28px;
+      background: linear-gradient(145deg, rgba(41, 26, 68, .88), rgba(15, 9, 27, .9));
+      box-shadow: 0 24px 58px rgba(0,0,0,.32);
+    }
+    .plan-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .plan-card {
+      border: 1px solid rgba(246, 146, 255, .28);
+      border-radius: 18px;
+      padding: 22px;
+      background: rgba(255,255,255,.06);
+    }
+    .plan-card.featured { border-color: rgba(246, 146, 255, .68); box-shadow: 0 0 34px rgba(246, 146, 255, .16); }
+    .plan-card h3 { margin: 0 0 8px; font-size: 1.2rem; }
+    .price { font-size: 2rem; font-weight: 850; margin: 0 0 4px; }
+    .plan-note { color: var(--pink-2); font-weight: 760; margin: 0 0 16px; }
+    .premium-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px 18px;
+      margin: 24px 0 0;
+      padding: 0;
+      list-style: none;
+      color: var(--muted);
+    }
+    .premium-list li::before { content: "• "; color: var(--pink-2); font-weight: 900; }
+    .faq-callout {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+      border-top: 1px solid var(--line);
+      margin-top: 30px;
+      padding-top: 24px;
+    }
+    .faq-callout p { margin: 0; color: var(--muted); line-height: 1.55; }
     .footer {
       margin-top: 42px;
       border-top: 1px solid var(--line);
@@ -248,6 +291,8 @@
       .section-head { grid-template-columns: 1fr; }
       .feature-grid { grid-template-columns: repeat(2, 1fr); }
       .phone-strip { grid-template-columns: repeat(2, 1fr); }
+      .plan-grid, .premium-list { grid-template-columns: 1fr; }
+      .faq-callout { align-items: flex-start; flex-direction: column; }
     }
     @media (max-width: 560px) {
       .shell { width: min(100% - 28px, 1120px); }
@@ -328,6 +373,45 @@
         <article class="phone-shot"><h3>Memory</h3><p>She remembers the little things.</p><img src="assets/memory.png" alt="Memory screen" /></article>
       </div>
     </section>
+
+    <section class="section premium-section" aria-labelledby="premium-title">
+      <div class="section-head">
+        <div>
+          <p class="label">Premium</p>
+          <h2 id="premium-title">More room for connection.</h2>
+        </div>
+        <p>Premium unlocks the full Love Always AI experience with unlimited conversations, deeper companion features, reminders, special dates, live weather, and priority responses.</p>
+      </div>
+      <div class="plan-grid">
+        <article class="plan-card featured">
+          <h3>Annual</h3>
+          <p class="price">$59.99 / year</p>
+          <p class="plan-note">Best Value - Save 50%</p>
+          <p>About $5.00 per month, billed yearly through the App Store.</p>
+        </article>
+        <article class="plan-card">
+          <h3>Monthly</h3>
+          <p class="price">$9.99 / month</p>
+          <p class="plan-note">Cancel anytime</p>
+          <p>Billed monthly through the App Store.</p>
+        </article>
+      </div>
+      <ul class="premium-list">
+        <li>Unlimited conversations</li>
+        <li>Deeper conversations</li>
+        <li>Custom reminders</li>
+        <li>Wake-up notifications</li>
+        <li>Special dates tracking</li>
+        <li>Live weather</li>
+        <li>Long-term memory</li>
+        <li>Priority responses</li>
+        <li>Restore purchases</li>
+      </ul>
+      <div class="faq-callout">
+        <p>Questions about memory, reminders, Premium, or support?</p>
+        <a class="outline" href="faq.html">Read the FAQ</a>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -338,6 +422,7 @@
       </a>
       <nav class="footer-links" aria-label="Footer links">
         <a href="https://apps.apple.com/sg/app/love-always-ai/id6760535944" target="_blank" rel="noopener">App Store</a>
+        <a href="faq.html">FAQ</a>
         <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms of Use</a>
         <a href="mailto:bentulj4@gmail.com?subject=Love%20Always%20AI%20issue">Support</a>
