@@ -230,16 +230,15 @@
     .plan-card h3 { margin: 0 0 8px; font-size: 1.2rem; }
     .price { font-size: 2rem; font-weight: 850; margin: 0 0 4px; }
     .plan-note { color: var(--pink-2); font-weight: 760; margin: 0 0 16px; }
-    .premium-list {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px 18px;
-      margin: 24px 0 0;
+    .plan-includes {
+      margin: 18px 0 0;
       padding: 0;
       list-style: none;
       color: var(--muted);
+      display: grid;
+      gap: 8px;
     }
-    .premium-list li::before { content: "• "; color: var(--pink-2); font-weight: 900; }
+    .plan-includes li::before { content: "• "; color: var(--pink-2); font-weight: 900; }
     .faq-callout {
       display: flex;
       justify-content: space-between;
@@ -291,7 +290,7 @@
       .section-head { grid-template-columns: 1fr; }
       .feature-grid { grid-template-columns: repeat(2, 1fr); }
       .phone-strip { grid-template-columns: repeat(2, 1fr); }
-      .plan-grid, .premium-list { grid-template-columns: 1fr; }
+      .plan-grid { grid-template-columns: 1fr; }
       .faq-callout { align-items: flex-start; flex-direction: column; }
     }
     @media (max-width: 560px) {
@@ -388,25 +387,34 @@
           <p class="price">$59.99 / year</p>
           <p class="plan-note">Best Value - Save 50%</p>
           <p>About $5.00 per month, billed yearly through the App Store.</p>
+          <ul class="plan-includes">
+            <li>Everything in Monthly</li>
+            <li>Unlimited conversations</li>
+            <li>Deeper companion conversations</li>
+            <li>Custom reminders and wake-up notifications</li>
+            <li>Special dates tracking</li>
+            <li>Long-term memory</li>
+            <li>Custom location and live weather</li>
+            <li>Priority responses</li>
+          </ul>
         </article>
         <article class="plan-card">
           <h3>Monthly</h3>
           <p class="price">$9.99 / month</p>
           <p class="plan-note">Cancel anytime</p>
           <p>Billed monthly through the App Store.</p>
+          <ul class="plan-includes">
+            <li>Unlimited conversations</li>
+            <li>Deeper companion conversations</li>
+            <li>Custom reminders and wake-up notifications</li>
+            <li>Special dates tracking</li>
+            <li>Long-term memory</li>
+            <li>Custom location and live weather</li>
+            <li>Priority responses</li>
+            <li>Restore purchases</li>
+          </ul>
         </article>
       </div>
-      <ul class="premium-list">
-        <li>Unlimited conversations</li>
-        <li>Deeper conversations</li>
-        <li>Custom reminders</li>
-        <li>Wake-up notifications</li>
-        <li>Special dates tracking</li>
-        <li>Live weather</li>
-        <li>Long-term memory</li>
-        <li>Priority responses</li>
-        <li>Restore purchases</li>
-      </ul>
       <div class="faq-callout">
         <p>Questions about memory, reminders, Premium, or support?</p>
         <a class="outline" href="faq.html">Read the FAQ</a>
