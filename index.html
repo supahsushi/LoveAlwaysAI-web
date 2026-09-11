@@ -197,20 +197,16 @@
     .phone-shot { text-align: center; }
     .phone-shot h3 { color: var(--pink-2); letter-spacing: .18em; text-transform: uppercase; font-size: .9rem; margin: 0 0 6px; }
     .phone-shot p { margin: 0 0 14px; color: var(--muted); font-size: .9rem; min-height: 42px; }
-    .phone-crop {
-      height: 430px;
-      border-radius: 34px 34px 0 0;
+    .phone-shot img {
+      width: 100%;
+      aspect-ratio: 212 / 406;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      border-radius: 32px 32px 0 0;
       border: 2px solid rgba(246, 146, 255, .58);
       box-shadow: 0 18px 48px rgba(0,0,0,.42);
-      background-image: url("assets/love-always-ai-preview.png");
-      background-size: 941px 1672px;
-      background-repeat: no-repeat;
-      overflow: hidden;
     }
-    .phone-a { background-position: -24px -1126px; }
-    .phone-b { background-position: -260px -1126px; }
-    .phone-c { background-position: -496px -1126px; }
-    .phone-d { background-position: -732px -1126px; }
     .footer {
       margin-top: 42px;
       border-top: 1px solid var(--line);
@@ -264,11 +260,7 @@
       .store-badge, .outline { width: 100%; justify-content: center; }
       .quick-row, .feature-grid, .phone-strip { grid-template-columns: 1fr; }
       .quick-row { margin-top: 0; }
-      .phone-crop { height: 520px; background-size: 1040px 1848px; }
-      .phone-a { background-position: -18px -1240px; }
-      .phone-b { background-position: -280px -1240px; }
-      .phone-c { background-position: -546px -1240px; }
-      .phone-d { background-position: -808px -1240px; }
+      .phone-shot img { max-width: 260px; margin: 0 auto; }
       .footer-inner { flex-direction: column; align-items: flex-start; }
       .footer-links { justify-content: flex-start; }
     }
@@ -330,10 +322,10 @@
 
     <section class="section" aria-label="Inside the app">
       <div class="phone-strip">
-        <article class="phone-shot"><h3>Special Dates</h3><p>Keep track of important dates and events.</p><div class="phone-crop phone-a"></div></article>
-        <article class="phone-shot"><h3>Reminders</h3><p>Stay organized with gentle reminders.</p><div class="phone-crop phone-b"></div></article>
-        <article class="phone-shot"><h3>Her Mind</h3><p>A safer, more personal connection.</p><div class="phone-crop phone-c"></div></article>
-        <article class="phone-shot"><h3>Memory</h3><p>She remembers the little things.</p><div class="phone-crop phone-d"></div></article>
+        <article class="phone-shot"><h3>Special Dates</h3><p>Keep track of important dates and events.</p><img src="assets/special-dates.png" alt="Special Dates screen" /></article>
+        <article class="phone-shot"><h3>Reminders</h3><p>Stay organized with gentle reminders.</p><img src="assets/reminders.png" alt="Reminders screen" /></article>
+        <article class="phone-shot"><h3>Her Mind</h3><p>A safer, more personal connection.</p><img src="assets/her-mind.png" alt="Her Mind thoughts screen" /></article>
+        <article class="phone-shot"><h3>Memory</h3><p>She remembers the little things.</p><img src="assets/memory.png" alt="Memory screen" /></article>
       </div>
     </section>
   </main>
